@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Senses - Chocolates Premium</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <div class="nav__logo">
+                    <div class="logo-icon">🍫</div>
+                    <div class="logo-text">
+                        <span class="logo-main">Three</span>
+                        <span class="logo-sub">Senses</span>
+                        <span class="logo-premium">PREMIUM</span>
+                        <span class="logo-tagline">CHOCOLATES</span>
+                    </div>
+                </div>
+            </div>
+            
+            <ul class="nav__menu" id="navMenu">
+                <li class="nav__item">
+                    <a href="/index.html" class="nav__link nav__link--active">
+                        🏠 Inicio
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="./html/productos.html" class="nav__link">
+                        📦 Catálogo
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="ofertas.html" class="nav__link">
+                        🏷️ Ofertas
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="./html/nosotros.html" class="nav__link">
+                        ℹ️ Nosotros
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="contacto.html" class="nav__link">
+                        📞 Contacto
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="nav__actions">
+                <button class="search-btn">🔍</button>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 $0.00
+                </button>
+                <button class="user-btn">👤</button>
+                <button class="nav__toggle" id="navToggle">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero__content container">
+                <div class="hero__text">
+                    <h1 class="hero__title">
+                        Three<br>
+                        <span class="hero__title--accent">Senses</span>
+                    </h1>
+                    <p class="hero__description">
+                        Descubre nuestra exquisita colección de chocolates artesanales, 
+                        creados con los mejores ingredientes del mundo
+                    </p>
+                    <div class="hero__cta">
+                        <a href="productos.html" class="btn btn--primary">Explorar Catálogo</a>
+                        <a href="nosotros.html" class="btn btn--secondary">Conocer Más</a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <div class="hero__chocolate">🍫</div>
+                </div>
+            </div>
+            
+            <!-- Stats -->
+            <div class="hero__stats container">
+                <div class="stat">
+                    <span class="stat__number">500+</span>
+                    <span class="stat__label">PRODUCTOS</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__number">95%</span>
+                    <span class="stat__label">SATISFACCIÓN</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__number">50k+</span>
+                    <span class="stat__label">CLIENTES</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section__title">¿Por qué elegir Three Senses?</h2>
+                <div class="features__grid">
+                    <div class="feature">
+                        <div class="feature__icon">🌱</div>
+                        <h3 class="feature__title">Ingredientes Premium</h3>
+                        <p class="feature__description">
+                            Seleccionamos cuidadosamente los mejores granos de cacao 
+                            de origen único para crear sabores excepcionales.
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature__icon">👨‍🍳</div>
+                        <h3 class="feature__title">Elaboración Artesanal</h3>
+                        <p class="feature__description">
+                            Cada chocolate es creado a mano por nuestros maestros chocolateros 
+                            con técnicas tradicionales y modernas.
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature__icon">🚚</div>
+                        <h3 class="feature__title">Entrega Garantizada</h3>
+                        <p class="feature__description">
+                            Garantizamos la frescura y calidad de nuestros productos 
+                            con un sistema de entrega especializado.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Preview -->
+        <section class="products-preview">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Productos Destacados</h2>
+                    <a href="productos.html" class="btn btn--outline">Ver Todos</a>
+                </div>
+                
+                <div class="products__grid" id="featuredProducts">
+                    <!-- Products will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta__content">
+                    <h2 class="cta__title">¿Listo para una experiencia única?</h2>
+                    <p class="cta__description">
+                        Descubre el mundo de sabores que Three Senses tiene para ti. 
+                        Cada mordida es un viaje sensorial inolvidable.
+                    </p>
+                    <a href="productos.html" class="btn btn--primary btn--large">
+                        Comprar Ahora
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal__backdrop" onclick="toggleCart()"></div>
+        <div class="cart-modal__content">
+            <div class="cart-modal__header">
+                <h3>Mi Carrito</h3>
+                <button class="cart-modal__close" onclick="toggleCart()">✕</button>
+            </div>
+            <div class="cart-modal__body" id="cartItems">
+                <div class="cart-empty">
+                    <div class="cart-empty__icon">🛒</div>
+                    <p>Tu carrito está vacío</p>
+                    <a href="productos.html" class="btn btn--primary">Ver Productos</a>
+                </div>
+            </div>
+            <div class="cart-modal__footer">
+                <div class="cart-total" id="cartTotal">Total: $0.00</div>
+                <button class="btn btn--primary btn--full" onclick="checkout()">
+                    Proceder al Pago
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <div class="footer__brand">
+                        <div class="footer__logo">
+                            <span class="logo-main">Three Senses</span>
+                            <span class="logo-premium">PREMIUM CHOCOLATES</span>
+                        </div>
+                        <p class="footer__description">
+                            Creando experiencias sensoriales únicas a través de 
+                            nuestros chocolates artesanales premium.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title">Navegación</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title">Contacto</h4>
+                    <div class="footer__contact">
+                        <p>📧 info@threesenses.com</p>
+                        <p>📱 +1 (555) 123-4567</p>
+                        <p>📍 123 Chocolate Ave, Sweet City</p>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title">Horarios</h4>
+                    <div class="footer__hours">
+                        <p>Lunes - Viernes: 9:00 AM - 8:00 PM</p>
+                        <p>Sábados: 10:00 AM - 6:00 PM</p>
+                        <p>Domingos: 12:00 PM - 5:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2025 Three Senses. Todos los derechos reservados.</p>
+                <div class="footer__social">
+                    <a href="#">📘</a>
+                    <a href="#">📷</a>
+                    <a href="#">🐦</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+    <script src="./js/main.js"></script>
+
+</html>

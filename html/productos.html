@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/productos.css">
+        <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <title>Productos - Three Senses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <div class="nav__logo">
+                    <div class="logo-icon">🍫</div>
+                    <div class="logo-text">
+                        <span class="logo-main">Three</span>
+                        <span class="logo-sub">Senses</span>
+                        <span class="logo-premium">PREMIUM</span>
+                        <span class="logo-tagline">CHOCOLATES</span>
+                    </div>
+                </div>
+            </div>
+            
+            <ul class="nav__menu" id="navMenu">
+                <li class="nav__item">
+                    <a href="../index.html" class="nav__link">
+                        🏠 Inicio
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="productos.html" class="nav__link nav__link--active">
+                        📦 Catálogo
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
+                        🏷️ Ofertas
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="nosotros.html" class="nav__link">
+                        ℹ️ Nosotros
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="contacto.html" class="nav__link">
+                        📞 Contacto
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="nav__actions">
+                <button class="search-btn">🔍</button>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 $0.00
+                </button>
+                <button class="user-btn">👤</button>
+                <button class="nav__toggle" id="navToggle">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="../index.html">Inicio</a> > <span>Productos</span>
+                </div>
+                <h1 class="page-title">Nuestro Catálogo</h1>
+                <p class="page-description">
+                    Descubre nuestra exquisita selección de chocolates artesanales 
+                    y arreglos florales premium
+                </p>
+            </div>
+        </section>
+
+        <!-- Filters and Search -->
+        <section class="product-filters">
+            <div class="container">
+                <div class="filters-bar">
+                    <div class="filter-group">
+                        <h3>Categorías</h3>
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-filter="todos" onclick="filterProducts('todos')">
+                                Todos
+                            </button>
+                            <button class="filter-btn" data-filter="chocolates" onclick="filterProducts('chocolates')">
+                                🍫 Chocolates
+                            </button>
+                            <button class="filter-btn" data-filter="flores" onclick="filterProducts('flores')">
+                                🌹 Flores
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h3>Ordenar por</h3>
+                        <select class="sort-select" id="sortSelect" onchange="sortProducts()">
+                            <option value="featured">Destacados</option>
+                            <option value="price-low">Precio: Menor a Mayor</option>
+                            <option value="price-high">Precio: Mayor a Menor</option>
+                            <option value="name">Orden Alfabético</option>
+                            <option value="rating">Mejor Valorados</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h3>Precio</h3>
+                        <div class="price-range">
+                            <input type="range" id="priceRange" min="0" max="100" value="100" 
+                                   onchange="filterByPrice()">
+                            <div class="price-display">
+                                $0 - $<span id="maxPrice">100</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Buscar productos..." 
+                           onkeyup="searchProducts()">
+                    <button class="search-submit">🔍</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Grid -->
+        <section class="products-section">
+            <div class="container">
+                <div class="products-header">
+                    <div class="results-info">
+                        <span id="resultsCount">0</span> productos encontrados
+                    </div>
+                    <div class="view-options">
+                        <button class="view-btn view-btn--active" data-view="grid" onclick="changeView('grid')">
+                            ⊞
+                        </button>
+                        <button class="view-btn" data-view="list" onclick="changeView('list')">
+                            ☰
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be loaded here -->
+                </div>
+                
+                <div class="products-loading hidden" id="productsLoading">
+                    <div class="loading-spinner">⟳</div>
+                    <p>Cargando productos...</p>
+                </div>
+                
+                <div class="no-results hidden" id="noResults">
+                    <div class="no-results__icon">🔍</div>
+                    <h3>No se encontraron productos</h3>
+                    <p>Prueba con otros filtros o términos de búsqueda</p>
+                    <button class="btn btn--primary" onclick="clearFilters()">
+                        Limpiar Filtros
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Details Modal -->
+        <div class="product-modal hidden" id="productModal">
+            <div class="product-modal__backdrop" onclick="closeProductModal()"></div>
+            <div class="product-modal__content">
+                <button class="product-modal__close" onclick="closeProductModal()">✕</button>
+                <div class="product-modal__body" id="productModalBody">
+                    <!-- Product details will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal__backdrop" onclick="toggleCart()"></div>
+        <div class="cart-modal__content">
+            <div class="cart-modal__header">
+                <h3>Mi Carrito</h3>
+                <button class="cart-modal__close" onclick="toggleCart()">✕</button>
+            </div>
+            <div class="cart-modal__body" id="cartItems">
+                <div class="cart-empty">
+                    <div class="cart-empty__icon">🛒</div>
+                    <p>Tu carrito está vacío</p>
+                    <button class="btn btn--primary" onclick="toggleCart()">Seguir Comprando</button>
+                </div>
+            </div>
+            <div class="cart-modal__footer">
+                <div class="cart-total" id="cartTotal">Total: $0.00</div>
+                <button class="btn btn--primary btn--full" onclick="checkout()">
+                    Proceder al Pago
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <div class="footer__brand">
+                        <div class="footer__logo">
+                            <span class="logo-main">Three Senses</span>
+                            <span class="logo-premium">PREMIUM CHOCOLATES</span>
+                        </div>
+                        <p class="footer__description">
+                            Creando experiencias sensoriales únicas a través de 
+                            nuestros chocolates artesanales premium.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title">Navegación</h4>
+                    <ul class="footer__links">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../html/productos.html">Productos</a></li>
+                        <li><a href="../html/nosotros.html">Nosotros</a></li>
+                        <li><a href="../html/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title">Contacto</h4>
+                    <div class="footer__contact">
+                        <p>📧 info@threesenses.com</p>
+                        <p>📱 099 086 0350</p>
+                        <p>📍 Avenida las Aguas, Guayaquil</p>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title">Horarios</h4>
+                    <div class="footer__hours">
+                        <p>Lunes - Viernes: 9:00 AM - 8:00 PM</p>
+                        <p>Sábados: 10:00 AM - 6:00 PM</p>
+                        <p>Domingos: 12:00 PM - 5:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2025 Three Senses. Todos los derechos reservados.</p>
+                <div class="footer__social">
+                    <a href="#">📘</a>
+                    <a href="#">📷</a>
+                    <a href="#">🐦</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+     <script src="../js/main.js"></script> 
+    <script src="../js/productos.js"></script>
+</body>
+</html>

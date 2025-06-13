@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Three Senses</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <div class="nav__logo">
+                    <div class="logo-icon">🍫</div>
+                    <div class="logo-text">
+                        <span class="logo-main">Three</span>
+                        <span class="logo-sub">Senses</span>
+                        <span class="logo-premium">PREMIUM</span>
+                        <span class="logo-tagline">CHOCOLATES</span>
+                    </div>
+                </div>
+            </div>
+            
+            <ul class="nav__menu" id="navMenu">
+                <li class="nav__item">
+                    <a href="../index.html" class="nav__link">
+                        🏠 Inicio
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="../html/productos.html" class="nav__link">
+                        📦 Catálogo
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
+                        🏷️ Ofertas
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="nosotros.html" class="nav__link nav__link--active">
+                        ℹ️ Nosotros
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="contacto.html" class="nav__link">
+                        📞 Contacto
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="nav__actions">
+                <button class="search-btn">🔍</button>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 $0.00
+                </button>
+                <button class="user-btn">👤</button>
+                <button class="nav__toggle" id="navToggle">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="../index.html">Inicio</a> > <span>Nosotros</span>
+                </div>
+                <h1 class="page-title">Nuestra Historia</h1>
+                <p class="page-description">
+                    Descubre la pasión detrás de cada chocolate y el arte que hace de 
+                    Three Senses una experiencia sensorial única
+                </p>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="our-story">
+            <div class="container">
+                <div class="story-content">
+                    <div class="story-text">
+                        <h2 class="section-title">El Arte de los Tres Sentidos</h2>
+                        <p class="story-intro">
+                            En Three Senses, creemos que el chocolate perfecto debe despertar 
+                            tres sentidos fundamentales: el <strong>gusto</strong>, el <strong>olfato</strong> 
+                            y la <strong>vista</strong>. Cada pieza que creamos es una sinfonía 
+                            sensorial diseñada para transportarte a un mundo de sabores únicos.
+                        </p>
+                        
+                        <div class="story-details">
+                            <div class="story-block">
+                                <h3>👁️ Vista</h3>
+                                <p>Cada chocolate es una obra de arte visual, cuidadosamente diseñada 
+                                con colores vibrantes y formas elegantes que anticipan el placer por venir.</p>
+                            </div>
+                            
+                            <div class="story-block">
+                                <h3>👃 Olfato</h3>
+                                <p>El aroma es la puerta de entrada al sabor. Nuestros chocolates 
+                                liberan fragancias complejas que evocan recuerdos y despiertan el apetito.</p>
+                            </div>
+                            
+                            <div class="story-block">
+                                <h3>👅 Gusto</h3>
+                                <p>El momento culminante: sabores balanceados que danzan en el paladar, 
+                                creando una experiencia memorable que perdura mucho después del último bocado.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="story-visual">
+                        <div class="story-image">
+                            <div class="chocolate-art">🍫</div>
+                            <div class="story-caption">
+                                Artesanía desde 2015
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Values -->
+        <section class="mission-values">
+            <div class="container">
+                <div class="mission-grid">
+                    <div class="mission-card">
+                        <div class="mission-icon">🎯</div>
+                        <h3>Nuestra Misión</h3>
+                        <p>
+                            Crear experiencias sensoriales excepcionales a través de chocolates 
+                            artesanales de la más alta calidad, utilizando ingredientes premium 
+                            y técnicas tradicionales perfeccionadas a lo largo de generaciones.
+                        </p>
+                    </div>
+                    
+                    <div class="mission-card">
+                        <div class="mission-icon">👁️</div>
+                        <h3>Nuestra Visión</h3>
+                        <p>
+                            Ser reconocidos mundialmente como los maestros de la chocolatería 
+                            sensorial, donde cada producto despierte emociones y cree recuerdos 
+                            inolvidables en nuestros clientes.
+                        </p>
+                    </div>
+                    
+                    <div class="mission-card">
+                        <div class="mission-icon">💎</div>
+                        <h3>Nuestros Valores</h3>
+                        <ul>
+                            <li>Excelencia en cada detalle</li>
+                            <li>Innovación constante</li>
+                            <li>Respeto por las tradiciones</li>
+                            <li>Compromiso con la calidad</li>
+                            <li>Pasión por el arte culinario</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="our-team">
+            <div class="container">
+                <h2 class="section-title">Nuestro Equipo</h2>
+                <p class="section-subtitle">
+                    Conoce a los artesanos apasionados que hacen posible la magia de Three Senses
+                </p>
+                
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-photo">👨‍🍳</div>
+                        <div class="team-info">
+                            <h3>Carlos Mendoza</h3>
+                            <p class="team-role">Maestro Chocolatero</p>
+                            <p class="team-description">
+                                Con más de 20 años de experiencia en chocolatería europea, 
+                                Carlos lidera nuestro equipo creativo con pasión y precisión.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card">
+                        <div class="team-photo">👩‍🔬</div>
+                        <div class="team-info">
+                            <h3>Isabella García</h3>
+                            <p class="team-role">Directora de Calidad</p>
+                            <p class="team-description">
+                                Especialista en ciencia alimentaria, Isabella garantiza que 
+                                cada producto cumpla con nuestros estándares excepcionales.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-card">
+                        <div class="team-photo">👨‍🎨</div>
+                        <div class="team-info">
+                            <h3>Miguel Torres</h3>
+                            <p class="team-role">Diseñador Culinario</p>
+                            <p class="team-description">
+                                Artista visual y chef, Miguel crea las presentaciones 
+                                espectaculares que hacen únicos nuestros productos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="our-process">
+            <div class="container">
+                <h2 class="section-title">Nuestro Proceso</h2>
+                <p class="section-subtitle">
+                    Desde el grano hasta tu mesa, cada paso es ejecutado con maestría
+                </p>
+                
+                <div class="process-timeline">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Selección del Cacao</h3>
+                            <p>
+                                Seleccionamos cuidadosamente los mejores granos de cacao 
+                                de plantaciones específicas en Ecuador, Madagascar y Venezuela.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Tostado Artesanal</h3>
+                            <p>
+                                Cada lote es tostado a la perfección usando técnicas 
+                                tradicionales que realzan los sabores únicos de cada origen.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Molido y Refinado</h3>
+                            <p>
+                                El cacao se muele durante horas hasta alcanzar la 
+                                textura sedosa característica de nuestros chocolates.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Creación Artística</h3>
+                            <p>
+                                Nuestros maestros chocolateros dan forma a cada pieza, 
+                                combinando técnicas tradicionales con innovación moderna.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Control de Calidad</h3>
+                            <p>
+                                Cada chocolate pasa por rigurosos controles de calidad 
+                                antes de llegar a nuestros clientes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications & Awards -->
+        <section class="certifications">
+            <div class="container">
+                <h2 class="section-title">Reconocimientos y Certificaciones</h2>
+                
+                <div class="awards-grid">
+                    <div class="award-card">
+                        <div class="award-icon">🏆</div>
+                        <h3>Mejor Chocolatería 2024</h3>
+                        <p>Premio Nacional de Gastronomía</p>
+                    </div>
+                    
+                    <div class="award-card">
+                        <div class="award-icon">🌱</div>
+                        <h3>Certificación Orgánica</h3>
+                        <p>Ingredientes 100% naturales</p>
+                    </div>
+                    
+                    <div class="award-card">
+                        <div class="award-icon">⭐</div>
+                        <h3>5 Estrellas</h3>
+                        <p>Calificación promedio de clientes</p>
+                    </div>
+                    
+                    <div class="award-card">
+                        <div class="award-icon">🤝</div>
+                        <h3>Comercio Justo</h3>
+                        <p>Compromiso con productores locales</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="about-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>¿Listo para una Experiencia Única?</h2>
+                    <p>
+                        Descubre por qué miles de clientes han elegido Three Senses 
+                        como su chocolatería de confianza
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="productos.html" class="btn btn--primary">
+                            Ver Nuestros Productos
+                        </a>
+                        <a href="contacto.html" class="btn btn--secondary">
+                            Contactar con Nosotros
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal__backdrop" onclick="toggleCart()"></div>
+        <div class="cart-modal__content">
+            <div class="cart-modal__header">
+                <h3>Mi Carrito</h3>
+                <button class="cart-modal__close" onclick="toggleCart()">✕</button>
+            </div>
+            <div class="cart-modal__body" id="cartItems">
+                <div class="cart-empty">
+                    <div class="cart-empty__icon">🛒</div>
+                    <p>Tu carrito está vacío</p>
+                    <a href="productos.html" class="btn btn--primary">Ver Productos</a>
+                </div>
+            </div>
+            <div class="cart-modal__footer">
+                <div class="cart-total" id="cartTotal">Total: $0.00</div>
+                <button class="btn btn--primary btn--full" onclick="checkout()">
+                    Proceder al Pago
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <div class="footer__brand">
+                        <div class="footer__logo">
+                            <span class="logo-main">Three Senses</span>
+                            <span class="logo-premium">PREMIUM CHOCOLATES</span>
+                        </div>
+                        <p class="footer__description">
+                            Creando experiencias sensoriales únicas a través de 
+                            nuestros chocolates artesanales premium.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title">Navegación</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title">Contacto</h4>
+                    <div class="footer__contact">
+                        <p>📧 info@threesenses.com</p>
+                        <p>📱 +1 (555) 123-4567</p>
+                        <p>📍 123 Chocolate Ave, Sweet City</p>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title">Horarios</h4>
+                    <div class="footer__hours">
+                        <p>Lunes - Viernes: 9:00 AM - 8:00 PM</p>
+                        <p>Sábados: 10:00 AM - 6:00 PM</p>
+                        <p>Domingos: 12:00 PM - 5:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2025 Three Senses. Todos los derechos reservados.</p>
+                <div class="footer__social">
+                    <a href="#">📘</a>
+                    <a href="#">📷</a>
+                    <a href="#">🐦</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/nosotros.js"></script>
+</body>
+</html>

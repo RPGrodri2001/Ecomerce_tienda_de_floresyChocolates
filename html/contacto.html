@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Three Senses</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <div class="nav__logo">
+                    <div class="logo-icon">🍫</div>
+                    <div class="logo-text">
+                        <span class="logo-main">Three</span>
+                        <span class="logo-sub">Senses</span>
+                        <span class="logo-premium">PREMIUM</span>
+                        <span class="logo-tagline">CHOCOLATES</span>
+                    </div>
+                </div>
+            </div>
+            
+            <ul class="nav__menu" id="navMenu">
+                <li class="nav__item">
+                    <a href="../index.html" class="nav__link">
+                        🏠 Inicio
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="../html/productos.html" class="nav__link">
+                        📦 Catálogo
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
+                        🏷️ Ofertas
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="../html/nosotros.html" class="nav__link">
+                        ℹ️ Nosotros
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="contacto.html" class="nav__link nav__link--active">
+                        📞 Contacto
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="nav__actions">
+                <button class="search-btn">🔍</button>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 $0.00
+                </button>
+                <button class="user-btn">👤</button>
+                <button class="nav__toggle" id="navToggle">☰</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="../index.html">Inicio</a> > <span>Contacto</span>
+                </div>
+                <h1 class="page-title">Contáctanos</h1>
+                <p class="page-description">
+                    Estamos aquí para ayudarte. Ponte en contacto con nosotros 
+                    para cualquier consulta, pedido especial o sugerencia
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="contact-info">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">📍</div>
+                        <h3>Dirección</h3>
+                        <p>123 Chocolate Avenue<br>
+                        Sweet City, SC 12345<br>
+                        Estados Unidos</p>
+                        <a href="#" class="contact-link">Ver en el mapa</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">📞</div>
+                        <h3>Teléfono</h3>
+                        <p>Ventas: +1 (555) 123-4567<br>
+                        Soporte: +1 (555) 123-4568<br>
+                        WhatsApp: +1 (555) 123-4569</p>
+                        <a href="tel:+15551234567" class="contact-link">Llamar ahora</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <p>Consultas: info@threesenses.com<br>
+                        Ventas: ventas@threesenses.com<br>
+                        Soporte: soporte@threesenses.com</p>
+                        <a href="mailto:info@threesenses.com" class="contact-link">Enviar email</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">🕒</div>
+                        <h3>Horarios</h3>
+                        <p>Lun - Vie: 9:00 AM - 8:00 PM<br>
+                        Sábados: 10:00 AM - 6:00 PM<br>
+                        Domingos: 12:00 PM - 5:00 PM</p>
+                        <a href="#" class="contact-link">Horarios especiales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form & Map -->
+        <section class="contact-form-section">
+            <div class="container">
+                <div class="contact-content">
+                    <!-- Contact Form -->
+                    <div class="form-container">
+                        <h2>Envíanos un Mensaje</h2>
+                        <p class="form-description">
+                            Complete el formulario y nos pondremos en contacto contigo 
+                            dentro de 24 horas hábiles
+                        </p>
+                        
+                        <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+                            <div class="form-group">
+                                <label for="name">Nombre Completo *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Teléfono</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Asunto *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Selecciona un asunto</option>
+                                    <option value="consulta-general">Consulta General</option>
+                                    <option value="pedido-especial">Pedido Especial</option>
+                                    <option value="soporte-tecnico">Soporte Técnico</option>
+                                    <option value="sugerencia">Sugerencia</option>
+                                    <option value="reclamo">Reclamo</option>
+                                    <option value="colaboracion">Oportunidad de Colaboración</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Mensaje *</label>
+                                <textarea id="message" name="message" rows="6" required 
+                                         placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    Quiero recibir noticias y ofertas especiales
+                                </label>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="privacy" name="privacy" required>
+                                    <span class="checkmark"></span>
+                                    Acepto la <a href="#" class="privacy-link">política de privacidad</a> *
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn--primary btn--large">
+                                Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Map and Additional Info -->
+                    <div class="map-container">
+                        <h3>Encuéntranos</h3>
+                        <div class="map-placeholder">
+                            <div class="map-icon">🗺️</div>
+                            <p>Mapa Interactivo</p>
+                            <p class="map-address">123 Chocolate Avenue, Sweet City</p>
+                        </div>
+                        
+                        <div class="location-details">
+                            <h4>Detalles de Ubicación</h4>
+                            <ul>
+                                <li>🚗 Estacionamiento gratuito disponible</li>
+                                <li>🚌 Transporte público cercano</li>
+                                <li>♿ Acceso para discapacitados</li>
+                                <li>🏪 Tienda física abierta</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="emergency-contact">
+                            <h4>Contacto de Emergencia</h4>
+                            <p>Para pedidos urgentes o problemas fuera del horario comercial:</p>
+                            <p class="emergency-phone">📱 +1 (555) 911-CHOC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Preguntas Frecuentes</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>¿Cuál es el tiempo de entrega?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>El tiempo de entrega estándar es de 2-4 días hábiles. Para pedidos urgentes, ofrecemos entrega express en 24 horas con costo adicional.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>¿Hacen pedidos personalizados?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>¡Sí! Creamos chocolates personalizados para eventos especiales, bodas, cumpleaños y ocasiones corporativas. Contactanos para más detalles.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>¿Qué métodos de pago aceptan?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Aceptamos todas las tarjetas de crédito principales, PayPal, transferencias bancarias y pago en efectivo en nuestra tienda física.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>¿Tienen productos sin azúcar?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sí, tenemos una línea completa de chocolates sin azúcar, veganos y libres de gluten. Consulta nuestra sección de productos especiales.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>¿Cómo conservar los chocolates?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Para mantener la frescura, conserva los chocolates en un lugar fresco y seco, entre 15-18°C. Evita la exposición directa al sol y fuentes de calor.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            <span>¿Ofrecen servicio de catering?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sí, ofrecemos servicios de catering para eventos corporativos, bodas y fiestas. Incluye mesa de chocolates, fuente de chocolate y más.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media & Newsletter -->
+        <section class="social-newsletter">
+            <div class="container">
+                <div class="social-content">
+                    <div class="social-section">
+                        <h3>Síguenos en Redes Sociales</h3>
+                        <p>Mantente actualizado con nuestras últimas creaciones y ofertas especiales</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <span class="social-icon">📘</span>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="#" class="social-link">
+                                <span class="social-icon">📷</span>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="#" class="social-link">
+                                <span class="social-icon">🐦</span>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="#" class="social-link">
+                                <span class="social-icon">🎬</span>
+                                <span>TikTok</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="newsletter-section">
+                        <h3>Suscríbete a Nuestro Newsletter</h3>
+                        <p>Recibe ofertas exclusivas, nuevos productos y contenido especial</p>
+                        <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                            <div class="newsletter-input-group">
+                                <input type="email" placeholder="Tu correo electrónico" required>
+                                <button type="submit" class="btn btn--primary">Suscribirse</button>
+                            </div>
+                            <p class="newsletter-terms">
+                                Al suscribirte, aceptas recibir emails de Three Senses. 
+                                Puedes cancelar en cualquier momento.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Success Modal -->
+    <div class="success-modal hidden" id="successModal">
+        <div class="success-modal__backdrop" onclick="closeSuccessModal()"></div>
+        <div class="success-modal__content">
+            <div class="success-icon">✅</div>
+            <h3>¡Mensaje Enviado!</h3>
+            <p>Gracias por contactarnos. Hemos recibido tu mensaje y te responderemos dentro de 24 horas hábiles.</p>
+            <button class="btn btn--primary" onclick="closeSuccessModal()">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal__backdrop" onclick="toggleCart()"></div>
+        <div class="cart-modal__content">
+            <div class="cart-modal__header">
+                <h3>Mi Carrito</h3>
+                <button class="cart-modal__close" onclick="toggleCart()">✕</button>
+            </div>
+            <div class="cart-modal__body" id="cartItems">
+                <div class="cart-empty">
+                    <div class="cart-empty__icon">🛒</div>
+                    <p>Tu carrito está vacío</p>
+                    <a href="productos.html" class="btn btn--primary">Ver Productos</a>
+                </div>
+            </div>
+            <div class="cart-modal__footer">
+                <div class="cart-total" id="cartTotal">Total: $0.00</div>
+                <button class="btn btn--primary btn--full" onclick="checkout()">
+                    Proceder al Pago
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <div class="footer__brand">
+                        <div class="footer__logo">
+                            <span class="logo-main">Three Senses</span>
+                            <span class="logo-premium">PREMIUM CHOCOLATES</span>
+                        </div>
+                        <p class="footer__description">
+                            Creando experiencias sensoriales únicas a través de 
+                            nuestros chocolates artesanales premium.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title">Navegación</h4>
+                    <ul class="footer__links">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../html/productos.html">Productos</a></li>
+                        <li><a href="../html/nosotros.html">Nosotros</a></li>
+                        <li><a href="../html/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title">Contacto</h4>
+                    <div class="footer__contact">
+                        <p>📧 info@threesenses.com</p>
+                        <p>📱 +1 (555) 123-4567</p>
+                        <p>📍 123 Chocolate Ave, Sweet City</p>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title">Horarios</h4>
+                    <div class="footer__hours">
+                        <p>Lunes - Viernes: 9:00 AM - 8:00 PM</p>
+                        <p>Sábados: 10:00 AM - 6:00 PM</p>
+                        <p>Domingos: 12:00 PM - 5:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2025 Three Senses. Todos los derechos reservados.</p>
+                <div class="footer__social">
+                    <a href="#">📘</a>
+                    <a href="#">📷</a>
+                    <a href="#">🐦</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<!--     <script src="../js/main.js"></script> -->   
+ <script src="../js/contacto.js"></script>
+</body>
+</html>
