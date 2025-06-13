@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/productos.css">
-        <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
     <title>Productos - Three Senses</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header class="header">
         <nav class="nav container">
@@ -24,7 +28,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <ul class="nav__menu" id="navMenu">
                 <li class="nav__item">
                     <a href="../index.html" class="nav__link">
@@ -52,7 +56,7 @@
                     </a>
                 </li>
             </ul>
-            
+
             <div class="nav__actions">
                 <button class="search-btn">🔍</button>
                 <button class="cart-btn" onclick="toggleCart()">
@@ -73,7 +77,7 @@
                 </div>
                 <h1 class="page-title">Nuestro Catálogo</h1>
                 <p class="page-description">
-                    Descubre nuestra exquisita selección de chocolates artesanales 
+                    Descubre nuestra exquisita selección de chocolates artesanales
                     y arreglos florales premium
                 </p>
             </div>
@@ -97,7 +101,7 @@
                             </button>
                         </div>
                     </div>
-                    
+
                     <div class="filter-group">
                         <h3>Ordenar por</h3>
                         <select class="sort-select" id="sortSelect" onchange="sortProducts()">
@@ -108,22 +112,21 @@
                             <option value="rating">Mejor Valorados</option>
                         </select>
                     </div>
-                    
+
                     <div class="filter-group">
                         <h3>Precio</h3>
                         <div class="price-range">
-                            <input type="range" id="priceRange" min="0" max="100" value="100" 
-                                   onchange="filterByPrice()">
+                            <input type="range" id="priceRange" min="0" max="100" value="100"
+                                onchange="filterByPrice()">
                             <div class="price-display">
                                 $0 - $<span id="maxPrice">100</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="search-bar">
-                    <input type="text" id="searchInput" placeholder="Buscar productos..." 
-                           onkeyup="searchProducts()">
+                    <input type="text" id="searchInput" placeholder="Buscar productos..." onkeyup="searchProducts()">
                     <button class="search-submit">🔍</button>
                 </div>
             </div>
@@ -145,16 +148,16 @@
                         </button>
                     </div>
                 </div>
-                
+
                 <div class="products-grid" id="productsGrid">
                     <!-- Products will be loaded here -->
                 </div>
-                
+
                 <div class="products-loading hidden" id="productsLoading">
                     <div class="loading-spinner">⟳</div>
                     <p>Cargando productos...</p>
                 </div>
-                
+
                 <div class="no-results hidden" id="noResults">
                     <div class="no-results__icon">🔍</div>
                     <h3>No se encontraron productos</h3>
@@ -212,12 +215,12 @@
                             <span class="logo-premium">PREMIUM CHOCOLATES</span>
                         </div>
                         <p class="footer__description">
-                            Creando experiencias sensoriales únicas a través de 
+                            Creando experiencias sensoriales únicas a través de
                             nuestros chocolates artesanales premium.
                         </p>
                     </div>
                 </div>
-                
+
                 <div class="footer__section">
                     <h4 class="footer__title">Navegación</h4>
                     <ul class="footer__links">
@@ -227,7 +230,7 @@
                         <li><a href="../html/contacto.html">Contacto</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer__section">
                     <h4 class="footer__title">Contacto</h4>
                     <div class="footer__contact">
@@ -236,7 +239,7 @@
                         <p>📍 Avenida las Aguas, Guayaquil</p>
                     </div>
                 </div>
-                
+
                 <div class="footer__section">
                     <h4 class="footer__title">Horarios</h4>
                     <div class="footer__hours">
@@ -246,7 +249,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer__bottom">
                 <p>&copy; 2025 Three Senses. Todos los derechos reservados.</p>
                 <div class="footer__social">
@@ -258,7 +261,8 @@
         </div>
     </footer>
 
-     <script src="../js/main.js"></script> 
+    <script src="../js/main.js"></script>
     <script src="../js/productos.js"></script>
 </body>
+
 </html>

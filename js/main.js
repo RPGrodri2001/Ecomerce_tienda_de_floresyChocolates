@@ -6,6 +6,7 @@ let products = [];
 let currentPage = 'home';
 
 // ===== PRODUCT DATA =====
+//***Productos destacados */
 const productData = [
     // Chocolates Premium
     {
@@ -37,7 +38,7 @@ const productData = [
         price: 32.99,
         description: "Delicioso chocolate blanco artesanal con trozos de fresa deshidratada.",
         image: "🤍",
-        featured: false,
+        featured: false,  //solo puse true, es mas facil para no tocar mas funciones
         stock: 22,
         rating: 4.7
     },
@@ -71,7 +72,7 @@ const productData = [
         price: 38.99,
         description: "Alegre arreglo de girasoles frescos en jarrón de cerámica artesanal.",
         image: "🌻",
-        featured: false,
+        featured: true,  //Se cambia para mostrar a "true" y a no mostrar a "false"
         stock: 15,
         rating: 4.6
     },
@@ -93,11 +94,13 @@ const productData = [
         price: 78.99,
         description: "Sofisticado arreglo de orquídeas blancas en maceta decorativa de bambú.",
         image: "🌺",
-        featured: false,
+        featured: false,  //Se cambia para mostrar a "true" y a no mostrar a "false"
         stock: 8,
         rating: 4.9
     }
 ];
+
+//----Cierre de Productos destacados----//
 
 // ===== INITIALIZATION =====
 document.addEventListener('DOMContentLoaded', function() {
